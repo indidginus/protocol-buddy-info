@@ -18,6 +18,9 @@ A Next.js web application that provides alternative health protocols with precis
   - Liquid dose converter (mg/ml calculations)
   - Powder solution calculator (dissolving powders in liquid)
   - Static dosing options
+- **Calendar Integration**: Set reminders and add protocols to your calendar
+- **Print to PDF**: Export protocols and dosage information as PDF documents
+- **Saved Protocols**: Bookmark and manage your favorite protocols
 - **Payment Integration**: Paywall system with Stripe checkout for premium access
 - **User Tracking**: Vercel KV storage for access state management
 - **Dark Mode**: Theme support with next-themes
