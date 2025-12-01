@@ -12,7 +12,7 @@ A Next.js web application that provides alternative health protocols with precis
 
 ## Features
 
-- **Protocol System**: 50+ protocols covering vitamins, minerals, antiparasitics, metabolic support, detoxification, and more
+- **Protocol System**: 60+ protocols covering vitamins, minerals, antiparasitics, metabolic support, detoxification, and more
 - **Dosage Calculators**:
   - Weight-based calculations (kg/lb)
   - Liquid dose converter (mg/ml calculations)
