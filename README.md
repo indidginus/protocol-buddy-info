@@ -6,7 +6,7 @@
 
 > **Note**: This is a public documentation repository. The source code is maintained in a private repository.
 
-**Live App**: [https://protocol-buddy.vercel.app/](https://protocol-buddy.vercel.app/)
+**Live App**: https://protocolbuddy.online/
 
 A Next.js web application that provides alternative health protocols with precision dosage calculators. The app features weight-based dosing, liquid concentration converters, and a paywall system with Stripe integration.
 
