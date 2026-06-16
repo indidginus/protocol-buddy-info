@@ -8,7 +8,7 @@
 
 **Live App**: https://protocolbuddy.online/
 
-A Next.js web application that provides alternative health protocols with precision dosage calculators. The app features weight-based dosing, liquid concentration converters, and a paywall system with Stripe integration.
+A Next.js web application that provides alternative health protocols with precision dosage calculators. The app features weight-based dosing, liquid concentration converters, an AI Q&A assistant, and a paywall system with Stripe integration.
 
 ## Features
 
@@ -18,6 +18,9 @@ A Next.js web application that provides alternative health protocols with precis
   - Liquid dose converter (mg/ml calculations)
   - Powder solution calculator (dissolving powders in liquid)
   - Static dosing options
+- **AskBuddy**: AI Q&A widget that answers health questions and links to relevant protocols
+- **Guides**: Long-form guides covering dosage calculation, safety/research, and protocol explainers
+- **Protocol Search**: Whole-word keyword search across protocol names, descriptions, instructions, and cautions
 - **Calendar Integration**: Set reminders and add protocols to your calendar
 - **Print to PDF**: Export protocols and dosage information as PDF documents
 - **Saved Protocols**: Bookmark and manage your favorite protocols
@@ -39,6 +42,7 @@ A Next.js web application that provides alternative health protocols with precis
 
 - **Vercel KV** for user data storage
 - **Stripe** for payment processing and subscription management
+- **Vercel AI SDK** powering AskBuddy with OpenAI gpt-4o-mini
 - **React Hook Form + Zod** for form validation
 
 ## Core Architecture
@@ -57,6 +61,20 @@ A Next.js web application that provides alternative health protocols with precis
 - **Static Dosing**: For non-weight-based protocols
 - **Form Validation**: Zod schemas with comprehensive error handling
 - **Visual Aids**: Concentration flow visualization for better understanding
+
+### AskBuddy (AI Q&A)
+
+- **AI-Powered Answers**: Answers health questions and links to relevant protocols
+- **Relevance Guardrails**: Constrained to known protocols to prevent hallucinated recommendations
+
+### Guides
+
+- **Long-form Content**: Guides covering dosage calculation, safety/research, and protocol explainers
+- **Reciprocal Linking**: Guides link back to their related protocol pages
+
+### Protocol Search
+
+- **Whole-word Matching**: Search across protocol names, keywords, descriptions, instructions, and cautions without false-positive substring matches
 
 ### Payment & Access Control
 
