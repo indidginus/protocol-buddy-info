@@ -8,7 +8,7 @@
 
 **Live App**: https://protocolbuddy.online/
 
-A Next.js web application that provides alternative health protocols with precision dosage calculators. The app features weight-based dosing, liquid concentration converters, an AI Q&A assistant, and a paywall system with Stripe integration.
+A Next.js web application that provides extensive library of evidence-based health protocols with precision dosage calculators. The app features weight-based dosing, liquid concentration converters, an AI Q&A assistant, and a paywall system with Stripe integration.
 
 ## Features
 
