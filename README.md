@@ -13,6 +13,7 @@ A Next.js web application that provides extensive library of evidence-based heal
 ## Features
 
 - **Protocol System**: Extensive library of evidence-based health protocols covering vitamins, minerals, antiparasitics, metabolic support, detoxification, and more
+- **Protocol Stacks**: Curated multi-protocol combinations (e.g. Sleep, Longevity, Cognitive) that pair complementary protocols toward a shared goal
 - **Dosage Calculators**:
   - Weight-based calculations (kg/lb)
   - Liquid dose converter (mg/ml calculations)
@@ -40,7 +41,7 @@ A Next.js web application that provides extensive library of evidence-based heal
 
 ### Backend & Services
 
-- **Vercel KV** for user data storage
+- **Upstash Redis** for user data storage
 - **Stripe** for payment processing and subscription management
 - **Vercel AI SDK** powering AskBuddy with OpenAI gpt-4o-mini
 - **React Hook Form + Zod** for form validation
@@ -62,6 +63,11 @@ A Next.js web application that provides extensive library of evidence-based heal
 - **Form Validation**: Zod schemas with comprehensive error handling
 - **Visual Aids**: Concentration flow visualization for better understanding
 
+### Protocol Stacks
+
+- **Curated Combinations**: Multi-protocol stacks (Sleep, Longevity, Cognitive, and more) pairing protocols that work synergistically toward a shared goal
+- **Rationale**: Each stack explains the mechanism behind why its component protocols are combined
+
 ### AskBuddy (AI Q&A)
 
 - **AI-Powered Answers**: Answers health questions and links to relevant protocols
@@ -79,7 +85,7 @@ A Next.js web application that provides extensive library of evidence-based heal
 ### Payment & Access Control
 
 - **Stripe Integration**: Checkout sessions for premium access
-- **User Tracking**: Vercel KV storage for user access state and saved protocols
+- **User Tracking**: Upstash Redis storage for user access state and saved protocols
 - **Paywall Component**: Conditional rendering based on user access status
 
 ### State Management
