@@ -84,7 +84,7 @@ A Next.js web application that provides extensive library of evidence-based heal
 
 ### Payment & Access Control
 
-- **Stripe Integration**: Checkout sessions for premium access
+- **Stripe Integration**: Checkout sessions for premium access, with automatic access revocation on subscription cancellation or refund
 - **User Tracking**: Upstash Redis storage for user access state and saved protocols
 - **Paywall Component**: Conditional rendering based on user access status
 
