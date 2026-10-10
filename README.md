@@ -25,7 +25,9 @@ A Next.js web application that provides extensive library of evidence-based heal
 - **Calendar Integration**: Set reminders and add protocols to your calendar
 - **Print to PDF**: Export protocols and dosage information as PDF documents
 - **Saved Protocols**: Bookmark and manage your favorite protocols
-- **Payment Integration**: Paywall system with Stripe checkout for premium access
+- **Payment Integration**: Metered paywall (a few free views, then monthly, annual or lifetime access) with Stripe checkout and a self-serve billing portal
+- **Email**: Consent-based sign-up list with one-click unsubscribe, a digest of new content, and an access-link recovery email
+- **About & AI Discoverability**: An About page and `llms.txt`; AI answer and search crawlers are welcome, AI training crawlers are blocked
 - **User Tracking**: Vercel KV storage for access state management
 - **Dark Mode**: Theme support with next-themes
 
@@ -41,9 +43,10 @@ A Next.js web application that provides extensive library of evidence-based heal
 
 ### Backend & Services
 
-- **Upstash Redis** for user data storage
+- **Upstash Redis** for user data storage, free-tier counters and rate limiting
 - **Stripe** for payment processing and subscription management
 - **Vercel AI SDK** powering AskBuddy with OpenAI gpt-4o-mini
+- **Brevo** for transactional and list email
 - **React Hook Form + Zod** for form validation
 
 ## Core Architecture
@@ -56,7 +59,7 @@ A Next.js web application that provides extensive library of evidence-based heal
 
 ### Dosage Calculators
 
-- **Weight-based Calculator**: Supports both kg and lb with min/max dosing per kg
+- **Weight-based Calculator**: Supports both kg and lb with min/max dosing per kg; switching units never changes a dose
 - **Liquid Dose Converter**: For liquid supplements with mg/ml calculations
 - **Powder Solution Calculator**: Calculate concentrations when dissolving powders in liquids
 - **Static Dosing**: For non-weight-based protocols
@@ -72,6 +75,8 @@ A Next.js web application that provides extensive library of evidence-based heal
 
 - **AI-Powered Answers**: Answers health questions and links to relevant protocols
 - **Relevance Guardrails**: Constrained to known protocols to prevent hallucinated recommendations
+- **Safety Replies**: Overdose and fatal-dose questions get a fixed redirect to a healthcare professional, never AI advice
+- **Cost Limits**: Per-IP request caps and a free-question allowance
 
 ### Guides
 
@@ -86,7 +91,8 @@ A Next.js web application that provides extensive library of evidence-based heal
 
 - **Stripe Integration**: Checkout sessions for premium access, with automatic access revocation on subscription cancellation or refund
 - **User Tracking**: Upstash Redis storage for user access state and saved protocols
-- **Paywall Component**: Conditional rendering based on user access status
+- **Paywall Component**: A metered paywall that keeps content readable to search engines and AI assistants while the calculators are the premium feature
+- **Identity**: Email-based access is verified with a signed proof, never by the email alone
 
 ### State Management
 
